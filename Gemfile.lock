@@ -60,7 +60,17 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     builder (3.2.4)
+    capybara (3.35.3)
+      addressable
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     diff-lcs (1.4.4)
@@ -84,6 +94,7 @@ GEM
     nio4r (2.5.7)
     nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
+    public_suffix (4.0.6)
     racc (1.5.2)
     rack (2.2.3)
     rack-protection (2.1.0)
@@ -117,6 +128,7 @@ GEM
       rake (>= 0.13)
       thor (~> 1.0)
     rake (13.0.6)
+    regexp_parser (2.1.1)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -136,6 +148,8 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
+    sinatra-base (1.0)
+      rack (>= 1.0)
     sinatra-contrib (2.1.0)
       multi_json
       mustermann (~> 1.0)
@@ -158,15 +172,19 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
     zeitwerk (2.4.2)
 
 PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  capybara
   rails
   rspec
   sinatra
+  sinatra-base
   sinatra-reloader
 
 BUNDLED WITH
