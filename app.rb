@@ -1,22 +1,23 @@
-require 'sinatra'
-require 'sinatra/reloader' if development?
 require 'sinatra/base'
+require 'sinatra/reloader' 
 
 class Battle < Sinatra::Base
   configure :development do
     register Sinatra::Reloader  
   end
 
-  get '/battle' do
-    "Testing infrastructure working!"
+
+  get '/' do
+    erb(:index)
   end
 
   run! if app_file == $0
-
-
-  get '/battle' do
-    @name = params[:name] 
-    erb(:index)
+  
+  post '/names' do
+    "" #Without quotes page 404s ???
+    @player_1 = params[:player_1] 
+    @player_2 = params[:player_2]
+    erb(:play)
   end
 
 end
