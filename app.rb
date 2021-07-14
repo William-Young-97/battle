@@ -8,8 +8,15 @@ class Battle < Sinatra::Base
   end
 
   get '/battle' do
-    "Hello battle!"
+    "Testing infrastructure working!"
   end
 
   run! if app_file == $0
+
+
+  get '/battle' do
+    @name = params[:name] 
+    erb(:index)
+  end
+
 end
