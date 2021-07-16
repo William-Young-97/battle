@@ -1,1 +1,5 @@
-<h1> <span style="color:green;"> <%= @player_1 %> </span> <span style="color:red;"> attacked </span> <span style="color:purple";> <%= @player_2  %>! </span> </h1>
+<%= @player_1.name %> attacked <%= @player_2.name %>!
+
+<form action='/play'>
+  <input type='submit' value='See damage!'>
+</form>

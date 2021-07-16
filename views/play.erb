@@ -1,10 +1,9 @@
-<h1> <span style="color:green;"> <%= @player_1 %> </span> <span style="color:cyan;"> vs </span> <span style="color:purple";> <%= @player_2  %> </span> </h1>
+<%= @player_1.name %> vs <%= @player_2.name %> 
+<br>
+<%= @player_1.name %> hitpoints: <%= @player_1.hitpoints %> 
+<br>
+<a href="/attack">Attack</a>
+<br>
+<%= @player_2.name %> hitpoints: <%= @player_2.hitpoints %> 
 
-<h2 style="color:green;"> <%= @player_1 %> hitpoints: 100 </h2>
-
-<form action="/attack">
-  <input type="submit" value="Attack!">
-</form>
-
-<h2 style="color:purple";> <%= @player_2 %> hitpoints: 100  </h2>
 
