@@ -22,6 +22,7 @@ Battle is a simple web application, created using the sinatra framework.
 - Ruby
 - Sinatra 
 - CSS
+- HTML
 
 # Conclusion
 
